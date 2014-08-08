@@ -1,0 +1,22 @@
+html,body {
+	margin: 0;
+	padding: 0;
+}
+
+/************** Header ***************/
+
+header {
+	width: 100%;
+	border:1px solid black;
+	overflow: hidden;
+}
+
+header h1 {
+	display: inline;
+	float: left;
+}
+
+header form {
+	display: inline;
+	float: right;
+}
