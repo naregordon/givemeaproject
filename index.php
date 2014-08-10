@@ -1,5 +1,7 @@
 <?php
 
-$page = "home";
+$page = "pp-inscription";
+
+
 
 require("apps/skel.php");
