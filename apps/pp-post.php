@@ -1,7 +1,6 @@
 <?php
-$db = mysqli_connect("localhost","root","root","givemeaproject");
 
-if(isset($_POST['postprojet'])) {
+if(isset($_POST['toto'])) {
 	$projetnom = $_POST['projetnom'];
 	$projetdescription = $_POST['projetdescription'];
 	$projetwords = $_POST['projetwords'];
