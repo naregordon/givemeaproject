@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.0.10deb1
+-- version 4.1.12
 -- http://www.phpmyadmin.net
 --
--- Client: localhost
--- Généré le: Lun 11 Août 2014 à 16:34
--- Version du serveur: 5.5.37-0ubuntu0.14.04.1
--- Version de PHP: 5.5.9-1ubuntu4
+-- Client :  localhost:8889
+-- Généré le :  Lun 11 Août 2014 à 19:55
+-- Version du serveur :  5.5.34
+-- Version de PHP :  5.5.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,8 +17,35 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Base de données: `givemeaproject`
+-- Base de données :  `givemeaproject`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `project`
+--
+
+CREATE TABLE `project` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `projetnom` varchar(255) COLLATE utf8_bin NOT NULL,
+  `projetdescription` varchar(1000) COLLATE utf8_bin NOT NULL,
+  `projetwords` varchar(255) COLLATE utf8_bin NOT NULL,
+  `profilrecherche` varchar(1000) COLLATE utf8_bin NOT NULL,
+  `projetdate` datetime NOT NULL,
+  `tempstravail` varchar(11) COLLATE utf8_bin NOT NULL,
+  `username` varchar(32) COLLATE utf8_bin NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id` (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=3 ;
+
+--
+-- Contenu de la table `project`
+--
+
+INSERT INTO `project` (`id`, `projetnom`, `projetdescription`, `projetwords`, `profilrecherche`, `projetdate`, `tempstravail`, `username`) VALUES
+(1, 'Site vitrine abdul', 'elsjjdomjsfmjfjo fjldfjldfj', 'php, design, boucherie, hallal', 'php, javascript, design', '2014-08-11 00:00:00', '3', 'abdul'),
+(2, 'sdfsd', 'sdfds', 'fsfssf', 'fsfssf', '2014-08-11 19:34:32', 'sfsfs', 'fsfssf');
 
 -- --------------------------------------------------------
 
@@ -26,7 +53,7 @@ SET time_zone = "+00:00";
 -- Structure de la table `user`
 --
 
-CREATE TABLE IF NOT EXISTS `user` (
+CREATE TABLE `user` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `username` varchar(32) COLLATE utf8_bin NOT NULL,
   `password` varchar(255) COLLATE utf8_bin NOT NULL,
