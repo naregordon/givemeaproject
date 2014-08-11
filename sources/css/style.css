@@ -1,24 +1,59 @@
+*,*:before,*:after{
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+}
+
 html,body {
 	margin: 0;
 	padding: 0;
+	font-family: sans-serif;
+	background-color: #FAFAFA;
 }
 
 /************** Header ***************/
 
 header {
 	width: 100%;
-	border:1px solid black;
+	border-bottom:1px solid black;
 	overflow: hidden;
+	padding: 5px;
+	line-height: 24px;
+	background-color: #16A085;
 }
 
 header h1 {
 	display: inline;
 	float: left;
+	font-family: 'Lobster', cursive;
+	font-size: 24px;
+}
+
+header a{
+	text-decoration: none;
+	color:#fff;
 }
 
 .loginForm {
 	display: inline;
 	float: right;
+}
+
+.loginForm input[type='submit']{
+	background-color: #21C4A3;
+	border-radius: 2px;
+	border: solid 1px rgba(0,0,0,0.2);
+	color:#FFF;
+}
+
+.loginForm input[type='submit']:hover{
+	cursor: pointer;
+	background-color: #23E0BA;
+}
+
+.loginForm input[type='email'],.loginForm input[type='password']{
+	border-radius: 2px;
+	border: none;
 }
 
 .headerUser {
@@ -31,4 +66,102 @@ header h1 {
 
 .disconnect {
 	float: right;
+}
+
+.fa{
+	color: #16A085;
+}
+
+#slider{
+	width: 100%;
+	text-align: center;
+	background-color: #000;
+}
+
+.content{
+	width: 1200px;
+	margin: 25px auto;
+}
+
+.insc-box{
+	overflow: hidden;
+}
+
+.insc{
+	float: left;
+	width:48%;
+	text-align: center;
+	margin-right: 4%;
+	background-color: #16A085;
+	/* font-family: 'Lobster', cursive; */
+	font-family: 'Raleway', sans-serif;
+	padding:10%;
+	position: relative;
+}
+
+.insc:last-child{
+	margin-right: 0;
+}
+
+.insc p{
+
+}
+
+.insc a{
+	text-decoration: none;
+	font-size: 35px;
+	color:#FFF;
+}
+
+.insc-hover{
+	visibility: hidden;
+	opacity :0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0,0,0,0.7);
+	transition: all 0.3s ease-in-out;
+	text-align: center;
+	padding-top: 18%;
+}
+
+.insc:hover .insc-hover{
+	visibility: visible;
+	opacity: 1;
+}
+
+.temoignage{
+	overflow: hidden;
+	padding:10px;
+	background-color:#DDD;
+	margin:35px 0;
+}
+
+.temoignage-photo{
+	width: 10%;
+	float: left;
+}
+
+.temoignage-photo img{
+	width: 100%;
+	border-radius: 50%;
+}
+
+.temoignage-texte{
+	width: 80%;
+	float: left;
+	padding:0 20px;
+	margin-top: 25px;
+}
+
+.temoignage-texte p{
+	line-height:20px;
+	font-style: italic;
+}
+
+.temoignage .temoignage-auteur{
+	font-size: 20px;
+	margin-top: 10px;
 }
