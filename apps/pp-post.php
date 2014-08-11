@@ -1,5 +1,4 @@
 <?php
-$db = mysqli_connect("localhost","root","root","givemeaproject");
 
 if(isset($_POST['postprojet'])) {
 	$projetnom = $_POST['projetnom'];
