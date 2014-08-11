@@ -1,6 +1,6 @@
 <?php
 
-if(isset($_POST['toto'])) {
+if(isset($_POST['projetpost'], $_POST['projetnom'], $_POST['projetdescription'], $_POST['profilrecherche'], $_POST['projetwords'])) {
 	$projetnom = $_POST['projetnom'];
 	$projetdescription = $_POST['projetdescription'];
 	$projetwords = $_POST['projetwords'];
