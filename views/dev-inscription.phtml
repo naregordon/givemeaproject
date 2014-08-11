@@ -1,7 +1,9 @@
-<form method="POST" action="index.php?page=pp-inscription">
+<h1>Inscription dev</dev>
+<form method="POST" action="index.php?page=dev-inscription">
+	<?= $msgInscription ?><br>
 	<label for="username">Nom d'utilisateur : </label><input type="text" name="username" required><br>
-	<label for="email">Email : </label><input type="text" name="email" required><br>
+	<label for="email">Email : </label><input type="email" name="email" required><br>
 	<label for="password">Mot de passe : </label><input type="password" name="password" required><br>
 	<label for="confpass">Confirmation du mot de passe : </label><input type="password" name="confpass" required><br>
-	<input type="submit" value="Créer mon compte">
+	<input type="submit" name="create" value="Créer mon compte">
 </form>

@@ -16,7 +16,19 @@ header h1 {
 	float: left;
 }
 
-header form {
+.loginForm {
 	display: inline;
+	float: right;
+}
+
+.headerUser {
+	display: inline;
+	float: right;
+	font-weight: bold;
+	font-size: 20px;
+	text-transform: capitalize;
+}
+
+.disconnect {
 	float: right;
 }

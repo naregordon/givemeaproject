@@ -1,8 +1,17 @@
 <header>
-	<h1><a href="#">Give Me a Project</a></h1>
-	<form method="POST" action="index.php?page=header">
-		<input type="text" name="logmail" placeholder="Email">
-		<input type="password" name="logpass" placeholder="Mot de passe">
-		<input type="submit" name="logsubmit" value="Se connecter">
-	</form> 
+	<h1><a href="index.php">Give Me a Project</a></h1>
+	<?php 
+		if(isset($_SESSION['username'])) {
+			echo "<h2 class='headerUser'>".$_SESSION['username']."</h2>
+				<form method='POST' action='index.php' class='disconnect'>
+					<input type='submit' name='disconnect' value='deconnexion'>
+				<form> ";
+		}
+		else { 
+			echo "<form method='POST' action='index.php' class='loginForm'>
+					<input type='email' name='logmail' placeholder='Email'>
+					<input type='password' name='logpass' placeholder='Mot de passe'>
+					<input type='submit' name='logsubmit' value='Se connecter'>
+				</form>"; } 
+	?>
 </header>
