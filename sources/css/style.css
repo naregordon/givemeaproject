@@ -30,19 +30,25 @@ header h1 {
 
 header a{
 	text-decoration: none;
-	color:#fff;
+	color: #FFF;
+}
+
+.titre{
+	margin-left: 20px;
+	color: #FFF;
 }
 
 .loginForm {
 	display: inline;
 	float: right;
+	margin-right: 20px;
 }
 
 .loginForm input[type='submit']{
 	background-color: #21C4A3;
 	border-radius: 2px;
 	border: solid 1px rgba(0,0,0,0.2);
-	color:#FFF;
+	color: #FFF;
 }
 
 .loginForm input[type='submit']:hover{
@@ -65,10 +71,6 @@ header a{
 
 .disconnect {
 	float: right;
-}
-
-.fa{
-	color: #16A085;
 }
 
 #slider{
@@ -102,10 +104,6 @@ header a{
 	margin-right: 0;
 }
 
-.insc p{
-
-}
-
 .insc a{
 	text-decoration: none;
 	font-size: 35px;
@@ -134,7 +132,7 @@ header a{
 .temoignage{
 	overflow: hidden;
 	padding:10px;
-	background-color:#DDD;
+	background-color: #DDD;
 	margin:35px 0;
 }
 
@@ -156,7 +154,7 @@ header a{
 }
 
 .temoignage-texte p{
-	line-height:20px;
+	line-height: 20px;
 	font-style: italic;
 }
 
