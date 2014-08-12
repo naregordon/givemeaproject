@@ -1,5 +1,8 @@
 <?php
 
+$res = mysqli_query($db,"SELECT photo FROM user WHERE username = '".$_SESSION['username']."'");
+$photo_user = mysqli_fetch_assoc($res);
+
 if(isset($_POST['logmail'], $_POST['logpass'], $_POST['logsubmit'])) {
 	$email = $_POST['logmail'];
 	$password = $_POST['logpass'];
