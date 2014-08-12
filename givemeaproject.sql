@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.1.4
+-- version 4.1.14
 -- http://www.phpmyadmin.net
 --
--- Client :  127.0.0.1
--- Généré le :  Mar 12 Août 2014 à 20:10
--- Version du serveur :  5.6.15-log
--- Version de PHP :  5.4.24
+-- Host: 127.0.0.1
+-- Generation Time: Aug 12, 2014 at 08:58 PM
+-- Server version: 5.6.17
+-- PHP Version: 5.5.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,13 +17,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Base de données :  `givemeaproject`
+-- Database: `givemeaproject`
 --
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `canditats`
+-- Table structure for table `canditats`
 --
 
 CREATE TABLE IF NOT EXISTS `canditats` (
@@ -35,7 +35,7 @@ CREATE TABLE IF NOT EXISTS `canditats` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `project`
+-- Table structure for table `project`
 --
 
 CREATE TABLE IF NOT EXISTS `project` (
@@ -54,7 +54,7 @@ CREATE TABLE IF NOT EXISTS `project` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=4 ;
 
 --
--- Contenu de la table `project`
+-- Dumping data for table `project`
 --
 
 INSERT INTO `project` (`id`, `projetnom`, `projetdescription`, `projetwords`, `profilrecherche`, `projetdate`, `tempstravail`, `username`, `statut`, `photo`) VALUES
@@ -65,7 +65,7 @@ INSERT INTO `project` (`id`, `projetnom`, `projetdescription`, `projetwords`, `p
 -- --------------------------------------------------------
 
 --
--- Structure de la table `user`
+-- Table structure for table `user`
 --
 
 CREATE TABLE IF NOT EXISTS `user` (
@@ -79,14 +79,14 @@ CREATE TABLE IF NOT EXISTS `user` (
   UNIQUE KEY `username` (`username`),
   UNIQUE KEY `id` (`id`),
   UNIQUE KEY `email` (`email`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=16 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=18 ;
 
 --
--- Contenu de la table `user`
+-- Dumping data for table `user`
 --
 
 INSERT INTO `user` (`id`, `username`, `password`, `email`, `type`, `photo`) VALUES
-(6, 'janno', 'janno', 'janno@janno.com', 'pp', '0'),
+(6, 'janno', 'janno', 'janno@janno.com', 'pp', 'Gasmask.jpg'),
 (7, 'michel', 'michel', 'michel@michel.com', 'pp', '0'),
 (8, 'poulet', 'poulet', 'poulet@hotmail.com', 'pp', '0'),
 (9, 'youpii', 'youpii', 'youpii@youpii.com', 'pp', '0'),
@@ -95,7 +95,9 @@ INSERT INTO `user` (`id`, `username`, `password`, `email`, `type`, `photo`) VALU
 (12, 'maman', 'maman', 'maman@maman.com', 'pp', '0'),
 (13, 'lucash', 'lucash', 'lucash@lucash.com', 'dev', '0'),
 (14, 'mahmoud', 'mahmoud', 'mahmoud@mahmoud.com', 'dev', '0'),
-(15, 'roodypoo', 'roodypoo', 'roodypoo@hotmail.com', 'pp', '0');
+(15, 'roodypoo', 'roodypoo', 'roodypoo@hotmail.com', 'pp', '0'),
+(16, 'arnaud', '123456', 'arnaud@mail.com', 'dev', 'oim.jpg'),
+(17, 'polo5', '123456', 'polo5@mail.com', 'pp', 'Gasmask.jpg');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
