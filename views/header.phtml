@@ -2,10 +2,13 @@
 	<h1 class="titre">Give Me a Project</h1>
 	<?php 
 		if(isset($_SESSION['username'])) {
-			echo "<h2 class='headerUser'>".$_SESSION['username']."</h2>
+			echo "<div class='logged'>
 				<form method='POST' action='index.php' class='disconnect'>
-					<input type='submit' name='disconnect' value='deconnexion'>
-				</form> ";
+					<input type='submit' name='disconnect' value='déconnexion'>
+				</form>
+				<h2 class='headerUser'>".$_SESSION['username']."</h2>
+				<a href=''><i class='fa fa-cog'></i></a>
+			</div>";
 		}
 		else { 
 			echo "<form method='POST' action='index.php' class='loginForm'>

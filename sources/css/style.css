@@ -17,7 +17,7 @@ header {
 	width: 100%;
 	border-bottom:1px solid black;
 	overflow: hidden;
-	padding: 5px;
+	padding: 5px 15px;
 	line-height: 24px;
 	background-color: #16A085;
 }
@@ -34,24 +34,22 @@ header a{
 }
 
 .titre{
-	margin-left: 20px;
 	color: #FFF;
 }
 
 .loginForm {
 	display: inline;
 	float: right;
-	margin-right: 20px;
 }
 
-.loginForm input[type='submit']{
+.loginForm input[type='submit'],.disconnect input[type='submit']{
 	background-color: #21C4A3;
 	border-radius: 2px;
 	border: solid 1px rgba(0,0,0,0.2);
 	color: #FFF;
 }
 
-.loginForm input[type='submit']:hover{
+.loginForm input[type='submit']:hover,.disconnect input[type='submit']:hover{
 	cursor: pointer;
 	background-color: #23E0BA;
 }
@@ -63,14 +61,19 @@ header a{
 
 .headerUser {
 	display: inline;
-	float: right;
 	font-weight: bold;
 	font-size: 20px;
 	text-transform: capitalize;
+	color: #FFF;
 }
 
 .disconnect {
 	float: right;
+	margin-left: 10px;
+}
+
+.logged{
+	float:right;
 }
 
 #slider{
@@ -161,4 +164,20 @@ header a{
 .temoignage .temoignage-auteur{
 	font-size: 20px;
 	margin-top: 10px;
+}
+
+/* FOOTER */
+
+footer{
+	width: 100%;
+	border-top: 1px solid black;
+	background-color: #16A085;
+}
+
+footer ul{
+
+}
+
+footer ul li{
+	display: inline-block;
 }
