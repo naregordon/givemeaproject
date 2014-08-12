@@ -13,18 +13,23 @@ if(isset($_POST['username'],$_POST['email'], $_POST['password'], $_POST['confpas
 	$data2 = mysqli_fetch_assoc($res2);
 	if($data['username'] === $username) {
 		$msgInscription = "Votre nom d'utilisateur est déjà pris. Choisissez en un autre.";
+		require('views/dev-inscription.phtml');
 	}
 	elseif($data['email'] === $email) {
 		$msgInscription = "Cette adresse email a déjà été enregistré. Vérifiez bien si vous n'avez pas déjà un compte sur Give Me a Project.";
+		require('views/dev-inscription.phtml');
 	}
 	elseif(strlen($username) < 5) {
 		$msgInscription = "Votre nom d'utilisateur doit faire au moins 5 caractères.";
+		require('views/dev-inscription.phtml');
 	}
 	elseif($password !== $confpass) {
 		$msgInscription = "La confirmation du mot de passe ne correspond pas";
+		require('views/dev-inscription.phtml');
 	}
 	elseif(strlen($password) < 5){
 		$msgInscription = "Votre mot de passe doit faire plus de 4 caractères.";
+		require('views/dev-inscription.phtml');
 	}
 	else{
 		require ('models/uploadFile.class.php');
