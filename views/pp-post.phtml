@@ -2,9 +2,9 @@
 
 <form method="POST" action="index.php?page=pp-post" id="postform">
 	<input type="text" name="projetnom" placeholder="Nom du projet"><br>
-	<textarea name="projetdescription">Description du projet...</textarea><br>
+	<textarea name="projetdescription" placeholder="Description du projet..."></textarea><br>
 	<input type="text" name="projetwords" placeholder="Mot clés associés au projet (séparés d'une virgule)"><br>
-	<textarea name="profilrecherche" type="text">Profil recherché</textarea><br>
+	<textarea name="profilrecherche" type="text" placeholder="Profil recherché"></textarea><br>
 	<select name="tempstravail" form="postform">
 		<option value="">Sélectionnez le temps de travail nécessaire</option>
 		<option value="1">moins d'une semaine</option>
@@ -14,5 +14,5 @@
 		<option value="5">1 mois ou plus</option>
 		<option value="6">indeterminé</option>
 	</select><br>
-	<input type="submit" name="postprojet" value="Créer le projet">
+	<input type="submit" name="projetpost" value="Créer le projet">
 </form>
