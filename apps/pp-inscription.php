@@ -27,7 +27,14 @@ if(isset($_POST['username'],$_POST['email'], $_POST['password'], $_POST['confpas
 		$msgInscription = "Votre mot de passe doit faire plus de 4 caractères.";
 	}
 	else{
-		mysqli_query($db, "INSERT INTO user (username, password, email, type) VALUES ('".$username."','".$password."','".$email."', 'pp')");
+		require ('models/uploadFile.class.php');
+		$upload = new upLoadFile();
+
+		$tmp_name=$_FILES['photo_pp_dev']['tmp_name'];
+		$name=$_FILES['photo_pp_dev']['name'];
+		$upload->upload($tmp_name,$name);
+
+		mysqli_query($db, "INSERT INTO user (username, password, email, type, photo) VALUES ('".$username."','".$password."','".$email."', 'pp','".$name."')");
 		echo "Votre compte a bien été crée";
 		require("apps/home.php");
 	}
