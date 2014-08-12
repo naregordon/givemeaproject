@@ -4,4 +4,5 @@ class User {
 	$username;
 	$email;
 
+	
 }

@@ -1,11 +1,23 @@
 <header>
+<<<<<<< HEAD
 	<h1 class="centre"><a href="index.php">Give Me a Project</a></h1>
+=======
+	<h1 class="titre">Give Me a Project</h1>
+>>>>>>> a6146f5c6403eaa8c5f562237498dd14aa9598fc
 	<?php 
 		if(isset($_SESSION['username'])) {
-			echo "<h2 class='headerUser'>".$_SESSION['username']."</h2>
+			echo "<div class='logged'>
 				<form method='POST' action='index.php' class='disconnect'>
+<<<<<<< HEAD
 					<input type='submit' name='disconnect' value='deconnexion'>
 				</form> ";
+=======
+					<input type='submit' name='disconnect' value='déconnexion'>
+				</form>
+				<h2 class='headerUser'>".$_SESSION['username']."</h2>
+				<a href=''><i class='fa fa-cog'></i></a>
+			</div>";
+>>>>>>> a6146f5c6403eaa8c5f562237498dd14aa9598fc
 		}
 		else { 
 			echo "<form method='POST' action='index.php' class='loginForm'>
