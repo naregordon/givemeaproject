@@ -1,20 +1,20 @@
 <?php require("apps/pp-nav.php"); ?>
 <div class="dashboard">
-	<h1>En cours</h1>
-	<?php 
-		$i=0;
-		while (isset($listeProjetEncours[$i]))
-	    {
-		    echo "<h2>".$listeProjetEncours[$i]->getProjetnom()."</h2>";
-		    $i++;
-		}
-	?>
 	<h1>En mode selection</h1>
 	<?php 
 		$i=0;
 		while (isset($listeProjetSelection[$i]))
 	    {
-		    echo "<h2>".$listeProjetSelection[$i]->getProjetnom()."</h2>";
+		    require ('views/billet-projet-selection.phtml');
+		    $i++;
+		}
+	?>
+	<h1>En cours</h1>
+	<?php 
+		$i=0;
+		while (isset($listeProjetEncours[$i]))
+	    {
+		    require ('views/billet-projet-encours.phtml');
 		    $i++;
 		}
 	?>
@@ -23,7 +23,7 @@
 		$i=0;
 		while (isset($listeProjetTermine[$i]))
 	    {
-		    echo "<h2>".$listeProjetTermine[$i]->getProjetnom()."</h2>";
+		   require ('views/billet-projet-termine.phtml');
 		    $i++;
 		}
 	?>
