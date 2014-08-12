@@ -22,7 +22,7 @@ class Projet {
 		return $this->projetwords;
 	}
 
-	public function getProjectUsername() {
+	public function getProjetusername() {
 		return $this->username;
 	}
 

@@ -1,3 +1,31 @@
 <?php require("apps/pp-nav.php"); ?>
+<div class="dashboard">
+	<h1>En cours</h1>
+	<?php 
+		$i=0;
+		while (isset($listeProjetEncours[$i]))
+	    {
+		    echo "<h2>".$listeProjetEncours[$i]->getProjetnom()."</h2>";
+		    $i++;
+		}
+	?>
+	<h1>En mode selection</h1>
+	<?php 
+		$i=0;
+		while (isset($listeProjetSelection[$i]))
+	    {
+		    echo "<h2>".$listeProjetSelection[$i]->getProjetnom()."</h2>";
+		    $i++;
+		}
+	?>
+	<h1>Les projets terminés</h1>
+	<?php 
+		$i=0;
+		while (isset($listeProjetTermine[$i]))
+	    {
+		    echo "<h2>".$listeProjetTermine[$i]->getProjetnom()."</h2>";
+		    $i++;
+		}
+	?>
 
-pp-profil
+</div>
