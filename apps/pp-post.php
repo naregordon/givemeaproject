@@ -8,7 +8,7 @@ if(isset($_POST['projetpost'], $_POST['projetnom'], $_POST['projetdescription'],
 	$tempstravail = $_POST['tempstravail'];
 	$username = $_SESSION['username'];
 
-	mysqli_query($db, "INSERT INTO `givemeaproject`.`project` (`projetnom`, `projetdescription`, `projetwords`, `profilrecherche`, `projetdate`, `tempstravail`, `username`) VALUES ('".$projetnom."', '".$projetdescription."','".$projetwords."','".$profilrecherche."',NOW(),'".$tempstravail."','".$username."','en attente')");
+	mysqli_query($db, "INSERT INTO `givemeaproject`.`project` (`projetnom`, `projetdescription`, `projetwords`, `profilrecherche`, `projetdate`, `tempstravail`, `username` , `statut`) VALUES ('".$projetnom."', '".$projetdescription."','".$projetwords."','".$profilrecherche."',NOW(),'".$tempstravail."','".$username."','en attente')");
 
 	require("apps/pp-profil.php");
 }
