@@ -6,8 +6,4 @@
 	<h3><?= $listeProjetTermine[$i]->getTempstravail()?></h3>
 	<h3><?= $listeProjetTermine[$i]->getProjetdate()?></h3>
 	<h3><?= $listeProjetTermine[$i]->getStatut()?></h3>
-	<form action="index.php?page=pp-projets" method="POST">
-		<input type="hidden" value="<?= $listeProjetEncours[$i]->getProjetdate()?>">
-		<input type="submit" value="Voir plus de détails">
-	</form>
 </div>
