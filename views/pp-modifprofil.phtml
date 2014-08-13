@@ -1,1 +1,33 @@
-pp-modifprofil
+<div class="modifprofil-pp">
+	<form action="index.php?page=pp-modifprofil" method="POST">
+
+		<label for="modifUsername">Nom d'utilisateur : </label>
+		<input type="text" name="modifUsername" value="<?= $content['username']?>"><br>
+
+		<label for="modifEmail">Adresse email : </label>
+		<input type="text" name="modifEmail" value="<?= $content['email']?>"><br>
+
+		<label for="modifNom">Nom : </label>
+		<input type="text" name="modifNom" value="<?= $content['nom']?>"><br>
+
+		<label for="modifPrenom">Prénom : </label>
+		<input type="text" name="modifPrenom" value="<?= $content['prenom']?>"><br>
+
+		<label for="modifPrésentation">Présentation : </label>
+		<textarea name="modifPresentation"><?= $content['presentation']?></textarea><br>
+
+		<input type="submit" name="submitModifProfil" value="Modifier">
+	</form>
+	<form action="index.php?page=pp-modifprofil" method="POST">
+		<input type="password" name="modifXPassword" placeholder="Votre mot de passe actuel"><br>
+
+		<input type="password" name="modifPassword" placeholder="Votre nouveau mot de passe"><br>
+
+		<input type="password" name="modifConfPassword" placeholder="Confirmez votre nouveau mot de passe"><br>
+
+		<input type="submit" name="submitModifPassword" value="Modifier mon mot de passe">
+	</form>
+	<form action="index.php?page=pp-modifprofil" method="POST">
+		<input type="submit" name="supprimerCompte" value="Supprimer mon compte">
+	</form>
+</div>
