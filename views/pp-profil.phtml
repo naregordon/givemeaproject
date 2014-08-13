@@ -1,31 +1,32 @@
 <?php require("apps/pp-nav.php"); ?>
-<div class="dashboard">
-	<h1>En mode selection</h1>
-	<?php 
-		$i=0;
-		while (isset($listeProjetSelection[$i]))
-	    {
-		    require ('views/billet-projet-selection.phtml');
-		    $i++;
-		}
-	?>
-	<h1>En cours</h1>
-	<?php 
-		$i=0;
-		while (isset($listeProjetEncours[$i]))
-	    {
-		    require ('views/billet-projet-encours.phtml');
-		    $i++;
-		}
-	?>
-	<h1>Les projets terminés</h1>
-	<?php 
-		$i=0;
-		while (isset($listeProjetTermine[$i]))
-	    {
-		   require ('views/billet-projet-termine.phtml');
-		    $i++;
-		}
-	?>
-
+<div class="content">
+	<div class="dashboard">
+		<h1>En mode selection</h1>
+		<?php 
+			$i=0;
+			while (isset($listeProjetSelection[$i]))
+		    {
+			    require ('views/billet-projet-selection.phtml');
+			    $i++;
+			}
+		?>
+		<h1>En cours</h1>
+		<?php 
+			$i=0;
+			while (isset($listeProjetEncours[$i]))
+		    {
+			    require ('views/billet-projet-encours.phtml');
+			    $i++;
+			}
+		?>
+		<h1>Les projets terminés</h1>
+		<?php 
+			$i=0;
+			while (isset($listeProjetTermine[$i]))
+		    {
+			   require ('views/billet-projet-termine.phtml');
+			    $i++;
+			}
+		?>
+	</div>
 </div>
