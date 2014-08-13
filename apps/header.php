@@ -19,10 +19,16 @@ if(isset($_POST['logmail'], $_POST['logpass'], $_POST['logsubmit'])) {
 	}
 	elseif($data['email'] === $email && $data['password'] === $password && $data['type'] === 'dev') {
 		$_SESSION['username'] = $data['username'];
+		$photo_user = '';
+		$res = mysqli_query($db,"SELECT photo FROM user WHERE username = '".$_SESSION['username']."'");
+		$photo_user = mysqli_fetch_assoc($res);
 		$page="dev-profil";
 	}
 	elseif($data['email'] === $email && $data['password'] === $password && $data['type'] === 'pp') {
 		$_SESSION['username'] = $data['username'];
+		$photo_user = '';
+		$res = mysqli_query($db,"SELECT photo FROM user WHERE username = '".$_SESSION['username']."'");
+		$photo_user = mysqli_fetch_assoc($res);
 		$page="pp-profil";
 	}
 }

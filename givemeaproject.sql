@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.1.14
+-- version 4.0.10deb1
 -- http://www.phpmyadmin.net
 --
--- Host: 127.0.0.1
--- Generation Time: Aug 12, 2014 at 08:58 PM
--- Server version: 5.6.17
--- PHP Version: 5.5.12
+-- Client: localhost
+-- Généré le: Mer 13 Août 2014 à 15:17
+-- Version du serveur: 5.5.37-0ubuntu0.14.04.1
+-- Version de PHP: 5.5.9-1ubuntu4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,13 +17,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Database: `givemeaproject`
+-- Base de données: `givemeaproject`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `canditats`
+-- Structure de la table `canditats`
 --
 
 CREATE TABLE IF NOT EXISTS `canditats` (
@@ -35,7 +35,7 @@ CREATE TABLE IF NOT EXISTS `canditats` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `project`
+-- Structure de la table `project`
 --
 
 CREATE TABLE IF NOT EXISTS `project` (
@@ -54,7 +54,7 @@ CREATE TABLE IF NOT EXISTS `project` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=4 ;
 
 --
--- Dumping data for table `project`
+-- Contenu de la table `project`
 --
 
 INSERT INTO `project` (`id`, `projetnom`, `projetdescription`, `projetwords`, `profilrecherche`, `projetdate`, `tempstravail`, `username`, `statut`, `photo`) VALUES
@@ -65,7 +65,7 @@ INSERT INTO `project` (`id`, `projetnom`, `projetdescription`, `projetwords`, `p
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user`
+-- Structure de la table `user`
 --
 
 CREATE TABLE IF NOT EXISTS `user` (
@@ -75,6 +75,11 @@ CREATE TABLE IF NOT EXISTS `user` (
   `email` varchar(255) COLLATE utf8_bin NOT NULL,
   `type` varchar(32) COLLATE utf8_bin NOT NULL,
   `photo` varchar(255) COLLATE utf8_bin NOT NULL,
+  `nom` varchar(32) COLLATE utf8_bin NOT NULL,
+  `prenom` varchar(32) COLLATE utf8_bin NOT NULL,
+  `presentation` varchar(1000) COLLATE utf8_bin NOT NULL,
+  `paypal` varchar(255) COLLATE utf8_bin NOT NULL,
+  `competences` varchar(1000) COLLATE utf8_bin NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `username` (`username`),
   UNIQUE KEY `id` (`id`),
@@ -82,22 +87,22 @@ CREATE TABLE IF NOT EXISTS `user` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=18 ;
 
 --
--- Dumping data for table `user`
+-- Contenu de la table `user`
 --
 
-INSERT INTO `user` (`id`, `username`, `password`, `email`, `type`, `photo`) VALUES
-(6, 'janno', 'janno', 'janno@janno.com', 'pp', 'Gasmask.jpg'),
-(7, 'michel', 'michel', 'michel@michel.com', 'pp', '0'),
-(8, 'poulet', 'poulet', 'poulet@hotmail.com', 'pp', '0'),
-(9, 'youpii', 'youpii', 'youpii@youpii.com', 'pp', '0'),
-(10, 'padawan', 'padawan', 'padawan@hotmail.com', 'pp', '0'),
-(11, 'karambar', 'karambar', 'karambar@hotmail.com', 'pp', '0'),
-(12, 'maman', 'maman', 'maman@maman.com', 'pp', '0'),
-(13, 'lucash', 'lucash', 'lucash@lucash.com', 'dev', '0'),
-(14, 'mahmoud', 'mahmoud', 'mahmoud@mahmoud.com', 'dev', '0'),
-(15, 'roodypoo', 'roodypoo', 'roodypoo@hotmail.com', 'pp', '0'),
-(16, 'arnaud', '123456', 'arnaud@mail.com', 'dev', 'oim.jpg'),
-(17, 'polo5', '123456', 'polo5@mail.com', 'pp', 'Gasmask.jpg');
+INSERT INTO `user` (`id`, `username`, `password`, `email`, `type`, `photo`, `nom`, `prenom`, `presentation`, `paypal`, `competences`) VALUES
+(6, 'janno', 'janno', 'janno@janno.com', 'pp', 'Gasmask.jpg', 'Lapin', 'Janno', 'Je suis un gentil petit lapin', 'janno@janno.com', 'Je suis un pro du PHP'),
+(7, 'michel', 'michel', 'michel@michel.com', 'pp', '0', '', '', '', '', ''),
+(8, 'poulet', 'poulet', 'poulet@hotmail.com', 'pp', '0', '', '', '', '', ''),
+(9, 'youpii', 'youpii', 'youpii@youpii.com', 'pp', '0', '', '', '', '', ''),
+(10, 'padawan', 'padawan', 'padawan@hotmail.com', 'pp', '0', '', '', '', '', ''),
+(11, 'karambar', 'karambar', 'karambar@hotmail.com', 'pp', '0', '', '', '', '', ''),
+(12, 'maman', 'maman', 'maman@maman.com', 'pp', '0', '', '', '', '', ''),
+(13, 'lucash', 'lucash', 'lucash@lucash.com', 'dev', '0', '', '', '', '', ''),
+(14, 'mahmoud', 'mahmoud', 'mahmoud@mahmoud.com', 'dev', '0', '', '', '', '', ''),
+(15, 'roodypoo', 'roodypoo', 'roodypoo@hotmail.com', 'pp', '0', '', '', '', '', ''),
+(16, 'arnaud', '123456', 'arnaud@mail.com', 'dev', 'oim.jpg', '', '', '', '', ''),
+(17, 'polo5', '123456', 'polo5@mail.com', 'pp', 'Gasmask.jpg', '', '', '', '', '');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
