@@ -1,9 +1,13 @@
-<div class="billet projet-selection">
-	<h3><?= $listeProjetSelection[$i]->getProjetnom()?></h3>
-	<h3><?= $listeProjetSelection[$i]->getProjetdescription()?></h3>
-	<h3><?= $listeProjetSelection[$i]->getProjetusername()?></h3>
-	<h3><?= $listeProjetSelection[$i]->getProfilrecherche()?></h3>
-	<h3><?= $listeProjetSelection[$i]->getTempstravail()?></h3>
-	<h3><?= $listeProjetSelection[$i]->getProjetdate()?></h3>
-	<h3><?= $listeProjetSelection[$i]->getStatut()?></h3>
+<div class="billet">
+	<div class="topProjet">
+		<p class="nomProjet"><?= $listeProjetSelection[$i]->getProjetnom()?></p>
+		<p class="auteur">Auteur: <span class="nomPP"><?= $listeProjetSelection[$i]->getProjetusername()?></span></p>
+	</div>
+	<div class="descProjet">
+		<p>Description: <?= $listeProjetSelection[$i]->getProjetdescription()?></p>
+		<p>Profils recherchés: <?= $listeProjetSelection[$i]->getProfilrecherche()?></p>
+		<p>Durée du projet: <?= $listeProjetSelection[$i]->getTempstravail()?></p>
+		<p>Date de publication: <?= $listeProjetSelection[$i]->getProjetdate()?></p>
+		<p>Statut: <?= $listeProjetSelection[$i]->getStatut()?></p>
+	</div>
 </div>
