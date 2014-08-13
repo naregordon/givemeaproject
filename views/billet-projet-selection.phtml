@@ -10,4 +10,8 @@
 		<p>Date de publication: <?= $listeProjetSelection[$i]->getProjetdate()?></p>
 		<p>Statut: <?= $listeProjetSelection[$i]->getStatut()?></p>
 	</div>
+	<form action="index.php?page=pp-projets" method="POST">
+		<input type="hidden" name="id" value="<?= $listeProjetSelection[$i]->getProjetid()?>">
+		<input type="submit" value="Voir plus de détails">
+	</form>
 </div>
