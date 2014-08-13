@@ -1,6 +1,7 @@
 <?php
 
 class Projet {
+	private $id;
 	private $projetnom;
 	private $projetdescription;
 	private $projetwords;
@@ -9,6 +10,10 @@ class Projet {
 	private $tempstravail;
 	private $projetdate;
 	private $statut;
+
+	public function getProjetid() {
+		return $this->id;
+	}
 
 	public function getProjetnom() {
 		return $this->projetnom;

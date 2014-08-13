@@ -1,9 +1,17 @@
-<div class="billet projet-termine">
-	<h3><?= $listeProjetTermine[$i]->getProjetnom()?></h3>
-	<h3><?= $listeProjetTermine[$i]->getProjetdescription()?></h3>
-	<h3><?= $listeProjetTermine[$i]->getProjetusername()?></h3>
-	<h3><?= $listeProjetTermine[$i]->getProfilrecherche()?></h3>
-	<h3><?= $listeProjetTermine[$i]->getTempstravail()?></h3>
-	<h3><?= $listeProjetTermine[$i]->getProjetdate()?></h3>
-	<h3><?= $listeProjetTermine[$i]->getStatut()?></h3>
+<div class="billet">
+	<div class="topProjet">
+		<p class="nomProjet"><?= $listeProjetTermine[$i]->getProjetnom()?></p>
+		<p class="auteur">Auteur: <span class="nomPP"><?= $listeProjetTermine[$i]->getProjetusername()?></span></p>
+	</div>
+	<div class="descProjet">
+		<p>Description: <?= $listeProjetTermine[$i]->getProjetdescription()?></p>
+		<p>Profils recherchés: <?= $listeProjetTermine[$i]->getProfilrecherche()?></p>
+		<p>Durée du projet: <?= $listeProjetTermine[$i]->getTempstravail()?></p>
+		<p>Date de publication: <?= $listeProjetTermine[$i]->getProjetdate()?></p>
+		<p>Statut: <?= $listeProjetTermine[$i]->getStatut()?></p>
+	</div>
+	<form action="index.php?page=pp-projets" method="POST">
+		<input type="hidden" value="<?= $listeProjetTermine[$i]->getProjetid()?>">
+		<input type="submit" value="Voir plus de détails">
+	</form>
 </div>

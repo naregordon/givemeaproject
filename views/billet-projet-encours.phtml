@@ -11,7 +11,7 @@
 		<p>Statut: <?= $listeProjetEncours[$i]->getStatut()?></p>
 	</div>
 	<form action="index.php?page=pp-projets" method="POST">
-		<input type="hidden" value="<?= $listeProjetEncours[$i]->getProjetdate()?>">
+		<input type="hidden" value="<?= $listeProjetEncours[$i]->getProjetid()?>">
 		<input type="submit" value="Voir plus de détails">
 	</form>
 </div>

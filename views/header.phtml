@@ -4,12 +4,15 @@
 	<?php 
 		if(isset($_SESSION['username'])) {
 			echo "<div class='logged'>
-				<form method='POST' action='index.php' class='disconnect'>
-					<input type='submit' name='disconnect' value='déconnexion'>
-				</form>
 				<img src='sources/images/photo_pp_dev/".$photo_user['photo']."' alt='' class='avatar'>
 				<h2 class='headerUser'>".$_SESSION['username']."</h2>
-				<a href=''><i class='fa fa-cog'></i></a>
+				<i class='menu-btn fa fa-cog'></i>
+				<div class='menu'>
+					<a href=''>Mon profil</a>
+					<form method='POST' action='index.php' class='disconnect'>
+						<input type='submit' name='disconnect' value='déconnexion'>
+					</form>
+				</div>
 			</div>";
 		}
 		else { 
