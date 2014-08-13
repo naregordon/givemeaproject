@@ -1,4 +1,22 @@
 <form action="index.php?page=liste-projets" method="POST">
 	<input type="search" name="search">
-	<input type="submit" name="rechercher" vallue="rechercher">
+	<input type="submit" name="searchBtn" vallue="rechercher">
 </form>
+<div class="liste-projet">
+	<?php 
+		$i=0;
+		while (isset($listeProjetSelection[$i]))
+	    {
+		    require ('views/billet-projet-selection.phtml');
+		    $i++;
+		}
+	?>
+	<?php 
+		$iSearch=0;
+		while (isset($listeProjetSearch[$iSearch]))
+	    {
+		    require ('views/billet-projet-search.phtml');
+		    $iSearch++;
+		}
+	?>
+</div>
