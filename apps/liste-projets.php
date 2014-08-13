@@ -1,5 +1,6 @@
 <?php
 require("models/projet.class.php");
+
 function getProjetsSelection($db)
 {
 	$tab=array();
@@ -24,5 +25,5 @@ if(isset($_POST['search']) && isset($_POST['searchBtn'])) {
 else
 $listeProjetSelection=getProjetsSelection($db);
 
-require("views/dev-recherche.phtml");
+require('views/liste-projets.phtml');
 ?>
