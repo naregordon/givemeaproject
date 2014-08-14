@@ -6,11 +6,11 @@
 			echo "<div class='logged'>
 				<img src='sources/images/photo_pp_dev/".$photo_user['photo']."' alt='' class='avatar'>
 				<h2 class='headerUser'>".$_SESSION['username']."</h2>
-				<i class='menu-btn fa fa-cog'></i>
+				<i class='menu-btn fa fa-cogs'></i>
 				<div class='menu'>
-					<a href=''>Mon profil</a>
+					<button><a href=''>mon profil&nbsp;&nbsp;<i class='menu-btn fa fa-wrench'></i></a></button>
 					<form method='POST' action='index.php' class='disconnect'>
-						<input type='submit' name='disconnect' value='déconnexion'>
+						<button type='submit' name='disconnect'>déconnexion&nbsp;&nbsp;<i class='menu-btn fa fa-power-off'></i></button>
 					</form>
 				</div>
 			</div>";
