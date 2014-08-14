@@ -16,7 +16,7 @@ html,body {
 header {
 	width: 100%;
 	height: 40px;
-	padding: 5px 15px;
+	padding: 5px 0;
 	line-height: 30px;
 	background-color: #16A085;
 	position: relative;
@@ -329,11 +329,14 @@ footer .footer-wrap .col:last-child{
 @media screen and (max-width: 1200px) {
   .header-wrap {
   	width: auto;
+  	margin: 0 2%;
   }
   .content {
     width: auto;
+  	margin: 0 2%;
   }
   .footer-wrap {
   	width: auto;
+  	margin: 0 2%;
   }
 }
