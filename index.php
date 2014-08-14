@@ -2,7 +2,7 @@
 
 session_start();
 
-$db = mysqli_connect("localhost","root","","givemeaproject");
+$db = mysqli_connect("localhost","root","root","givemeaproject");
 
 if(isset($_POST['disconnect'])) {
 	$_SESSION = array();

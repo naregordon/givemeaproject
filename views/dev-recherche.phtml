@@ -1,24 +1,16 @@
 <?php require('apps/dev-nav.php'); ?>
 
-<form action="index.php?page=liste-projets" method="POST">
+<form action="index.php?page=dev-recherche" method="POST">
 	<input type="search" name="search">
 	<input type="submit" name="searchBtn" vallue="rechercher">
 </form>
 <div class="liste-projet">
 	<?php 
 		$i=0;
-		while (isset($listeProjetSelectiondev[$i]))
+		while (isset($listeProjetSelection[$i]))
 	    {
 		    require ('views/dev-projets.phtml');
 		    $i++;
-		}
-	?>
-	<?php 
-		$iSearch=0;
-		while (isset($listeProjetSearch[$iSearch]))
-	    {
-		    require ('views/billet-projet-search.phtml');
-		    $iSearch++;
 		}
 	?>
 </div>

@@ -7,4 +7,4 @@ if (isset($_POST['id'])){
 	$res = mysqli_query($db, "SELECT * FROM project WHERE id='".$id."'");
 	$data = mysqli_fetch_object($res, 'Projet');
 }
-require("views/pp-projets.phtml");
+require("views/pp-fiche-projet.phtml");
