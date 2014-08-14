@@ -126,7 +126,7 @@ header a{
 
 .content{
 	width: 1200px;
-	margin: 25px auto;
+	margin: 3% auto;
 }
 
 .insc-box{
@@ -333,7 +333,7 @@ footer .footer-wrap .col:last-child{
   }
   .content {
     width: auto;
-  	margin: 0 2%;
+  	margin: 3% 2%;
   }
   .footer-wrap {
   	width: auto;
