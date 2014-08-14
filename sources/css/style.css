@@ -33,6 +33,11 @@ header a{
 	color: #FFF;
 }
 
+.header-wrap {
+	width: 1200px;
+	margin: 0 auto;
+}
+
 .titre{
 	color: #FFF;
 }
@@ -76,6 +81,7 @@ header a{
 	position:absolute;
 	background-color: #16A085;
 	width:115px;
+	right: 0%;
 }
 
 .menu-btn{
@@ -202,6 +208,7 @@ header a{
 
 /************** FOOTER **************/
 
+
 footer{
 	width: 100%;
 	background-color: #16A085;
@@ -315,4 +322,18 @@ footer .footer-wrap .col:last-child{
 .nomPP{
 	font-style: italic;
 	color: #FFF;
+}
+
+/* -----------------QUERIES----------------- */
+
+@media screen and (max-width: 1200px) {
+  .header-wrap {
+  	width: auto;
+  }
+  .content {
+    width: auto;
+  }
+  .footer-wrap {
+  	width: auto;
+  }
 }
