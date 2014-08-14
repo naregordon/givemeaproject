@@ -1,5 +1,5 @@
 <div class="modifprofil-dev">
-	<form action="index.php?page=pp-modifprofil" method="POST">
+	<form action="index.php?page=pp-modifprofil" method="POST" enctype="multipart/form-data">
 
 		<label for="modifUsername">Nom d'utilisateur : </label>
 		<input type="text" name="modifUsername" value="<?= $content['username']?>"><br>
@@ -21,7 +21,7 @@
 
 		<label for="modifCompetences">Mes compétences : </label>
 		<textarea name="modifCompetences"><?= $content['competences']?></textarea><br>
-
+		<input type="file" name="photo_pp_dev" accept="image/bmp,image/gif,image/png,image/jpeg,image/x-ms-bmp"> 
 		<input type="submit" name="submitModifProfil" value="Modifier">
 	</form>
 	<form action="index.php?page=pp-modifprofil" method="POST">

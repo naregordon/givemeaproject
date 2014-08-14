@@ -32,13 +32,16 @@ if(isset($_POST['username'],$_POST['email'], $_POST['password'], $_POST['confpas
 		require('views/pp-inscription.phtml');
 	}
 	else{
+		/*if(isset($_FILES['photo_pp_dev'])) {
 		require ('models/uploadFile.class.php');
-		$upload = new upLoadFile();
-
-		$tmp_name=$_FILES['photo_pp_dev']['tmp_name'];
-		$name=$_FILES['photo_pp_dev']['name'];
-		$upload->upload($tmp_name,$name);
-
+			$upload = new upLoadFile();
+			$tmp_name=$_FILES['photo_pp_dev']['tmp_name'];
+			$name=$_FILES['photo_pp_dev']['name'];
+			$upload->upload($tmp_name,$name);
+		}
+		else {*/
+			$name = 'user.png';	
+		/*}*/
 		mysqli_query($db, "INSERT INTO user (username, password, email, type, photo) VALUES ('".$username."','".$password."','".$email."', 'pp','".$name."')");
 		echo "Votre compte a bien été crée";
 		require("apps/home.php");

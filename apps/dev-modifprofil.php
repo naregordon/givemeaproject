@@ -11,8 +11,13 @@ if(isset($_POST['submitModifProfil'])) {
 	$presentation = $_POST['modifPresentation'];
 	$paypal = $_POST['modifPaypal'];
 	$competences = $_POST['modifCompetences'];
+	require ('models/uploadFile.class.php');
+			$upload = new upLoadFile();
+			$tmp_name=$_FILES['photo_pp_dev']['tmp_name'];
+			$name=$_FILES['photo_pp_dev']['name'];
+			$upload->upload($tmp_name,$name);
 
-	mysqli_query($db, "UPDATE user SET username = '".$username."', email = '".$email."', nom ='".$nom."', prenom = '".$prenom."', presentation = '".$presentation."', paypal = '".$paypal."', competences = '".$competences."' WHERE username = '".$_SESSION['username']."'");
+	mysqli_query($db, "UPDATE user SET username = '".$username."', email = '".$email."', photo = '".$name."', nom ='".$nom."', prenom = '".$prenom."', presentation = '".$presentation."', paypal = '".$paypal."', competences = '".$competences."' WHERE username = '".$_SESSION['username']."'");
 }
 
 if(isset($_POST['submitModifPassword'], $_POST['modifXPassword'], $_POST['modifPassword'], $_POST['modifConfPassword'])) {
