@@ -10,9 +10,19 @@
 		<p>Date de publication: <?= $listeProjetSelection[$i]->getProjetdate()?></p>
 		<p>Statut: <?= $listeProjetSelection[$i]->getStatut()?></p>
 	</div>
-	<form action="index.php?page=dev-projets" method="POST">
-		<input type="hidden" name="idp" value="<?= $listeProjetSelection[$i]->getProjetid()?>">
-		<input type="submit" name="voirFicheProjet" value="Voir plus de détails">
-		<input type="submit" name="postulerProjet" value="Postuler">
-	</form>
+	<?php
+	if($_SESSION['type'] === 'dev') {
+		echo '<form action="index.php?page=dev-projets" method="POST">
+			<input type="hidden" name="idp" value="'.$listeProjetSelection[$i]->getProjetid().'">
+			<input type="submit" name="voirFicheProjet" value="Voir plus de détails">
+			<input type="submit" name="postulerProjet" value="Postuler">
+			</form>';
+		}
+		else {
+			echo '<form action="index.php?page=pp-projets" method="POST">
+			<input type="hidden" name="idp" value="'.$listeProjetSelection[$i]->getProjetid().'">
+			<input type="submit" name="voirFicheProjet" value="Voir plus de détails">
+			</form>';
+		}
+	?>
 </div>
