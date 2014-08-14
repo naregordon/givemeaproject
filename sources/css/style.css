@@ -122,6 +122,26 @@ header a{
 	width: 100%;
 	text-align: center;
 	background-color: #000;
+	position: relative;
+}
+
+.bouton-rech{
+	position: absolute;
+	top: 50%;
+}
+
+.bouton-rech button{
+	padding: 12%;
+	background-color: #16A085;
+	color:#FFF;
+	border:none;
+	font-size: 35px;
+	transition: all 0.3s ease-in-out;
+}
+
+.bouton-rech button:hover{
+	background-color: #23E0BA;
+	cursor: pointer;
 }
 
 .content{
@@ -142,6 +162,7 @@ header a{
 	font-family: 'Raleway', sans-serif;
 	padding:3%;
 	position: relative;
+	transition: all 0.3s ease-in-out;
 }
 
 .insc:last-child{
@@ -154,22 +175,8 @@ header a{
 	color:#FFF;
 }
 
-.insc-hover{
-	visibility: hidden;
-	opacity :0;
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background-color: rgba(0,0,0,0.7);
-	transition: all 0.3s ease-in-out;
-	text-align: center;
-}
-
-.insc:hover .insc-hover{
-	visibility: visible;
-	opacity: 1;
+.insc:hover{
+	background-color: #23E0BA;
 }
 
 .temoignage{
