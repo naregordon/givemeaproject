@@ -10,4 +10,13 @@ Description du projet: <?=$data->getProjetdescription()?><br>
 Profil recherché: <?=$data->getProfilrecherche()?><br>
 Temps de travail estimé: <?=$data->getTempstravail()?><br>
 
+<?php
+	if($data->getStatut() === 'selection') {
+		echo '<form action="index.php?page=dev-projets" method="POST">
+			<input type="hidden" name="idp" value="'.$data->getProjetid().'">
+			<input type="submit" name="postulerFicheProjet" value="Postuler">
+			</form>';
+	}
+?>
+
 <a href="index.php?page=dev-profil">Back</a>

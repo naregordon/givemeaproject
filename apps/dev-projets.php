@@ -26,3 +26,11 @@ if (isset($_POST['postulerProjet'])) {
 	mysqli_query($db, "INSERT INTO candidats (id_projet, username_candidat) VALUES ('".$idp."','".$selection."') ");
 	require("views/dev-recherche.phtml");
 }
+
+if (isset($_POST['postulerFicheProjet'])) {
+	$selection = $_SESSION['username'];
+	$idp=$_POST['idp'];
+	mysqli_query($db, "INSERT INTO candidats (id_projet, username_candidat) VALUES ('".$idp."','".$selection."') ");
+	require("views/dev-profil.phtml");
+}
+
