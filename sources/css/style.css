@@ -121,13 +121,12 @@ header a{
 #slider{
 	width: 100%;
 	text-align: center;
-	background-color: #000;
 	position: relative;
 }
 
 .bouton-rech{
 	position: absolute;
-	top: 50%;
+	top: 30%;
 }
 
 .bouton-rech button{
