@@ -25,7 +25,7 @@ hr {
 
 header {
 	width: 100%;
-	height: 40px;
+	height: 45px;
 	padding: 5px 0;
 	line-height: 30px;
 	background-color: #16A085;
@@ -377,6 +377,17 @@ footer .footer-wrap .col:last-child{
 	border-bottom: solid 1px #ccc;
 	padding: 0 5px 5px 0;
 	background-color: #eee;
+}
+
+.billet input {
+	background-color: #16A085;
+	padding: 0.8%;
+	text-decoration: none;
+	color:#fff;
+	float: left;
+	border: none;
+	cursor: pointer;
+	margin-right: 2px;
 }
 
 .topProjet{

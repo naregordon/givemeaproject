@@ -1,9 +1,13 @@
 <?php require('apps/dev-nav.php'); ?>
 
+<div class="search">
 <form action="index.php?page=dev-recherche" method="POST">
-	<input type="search" name="search">
-	<input type="submit" name="searchBtn" vallue="rechercher">
+	<input type="search" name="search" placeholder="chercher">
+	<button type="submit" name="searchBtn"><i class="fa fa-search"></i></button>
 </form>
+</div>
+<a class="back right" href="index.php?page=dev-recherche">Tout afficher</a>
+<hr>
 <div class="liste-projet">
 	<?php 
 		$i=0;
