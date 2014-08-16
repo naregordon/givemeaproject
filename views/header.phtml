@@ -3,19 +3,39 @@
 <h1 class="titre">Give Me a Project</h1>
 
 	<?php 
-		if(isset($_SESSION['username'])) {
+	if(isset($_SESSION['username'])) {
+	$res=mysqli_query($db,"SELECT type FROM user WHERE username = '".$_SESSION['username']."'");
+	$type=mysqli_fetch_assoc($res);
+
+		if($type['type']=== 'dev') {
 			echo "<div class='logged'>
 				<img src='sources/images/photo_pp_dev/".$photo_user['photo']."' alt='' class='avatar'>
 				<h2 class='headerUser'>".$_SESSION['username']."</h2>
 				<i class='menu-btn fa fa-cogs'></i>
 				<div class='menu'>
-					<button><a href=''>mon profil&nbsp;&nbsp;<i class='menu-btn fa fa-wrench'></i></a></button>
+					<a href='index.php?page=dev-profil'><button>dashboard&nbsp;&nbsp;<i class='fa fa-tachometer'></i></button></a>
+					<a href='index.php?page=dev-modifprofil'><button>mon profil&nbsp;&nbsp;<i class='menu-btn fa fa-wrench'></i></button></a>
 					<form method='POST' action='index.php' class='disconnect'>
 						<button type='submit' name='disconnect'>déconnexion&nbsp;&nbsp;<i class='menu-btn fa fa-power-off'></i></button>
 					</form>
 				</div>
 			</div>";
 		}
+		else if($type['type']=== 'pp') {
+			echo "<div class='logged'>
+				<img src='sources/images/photo_pp_dev/".$photo_user['photo']."' alt='' class='avatar'>
+				<h2 class='headerUser'>".$_SESSION['username']."</h2>
+				<i class='menu-btn fa fa-cogs'></i>
+				<div class='menu'>
+					<a href='index.php?page=pp-profil'><button>dashboard&nbsp;&nbsp;<i class='fa fa-tachometer'></i></button></a>
+					<a href='index.php?page=pp-modifprofil'><button>mon profil&nbsp;&nbsp;<i class='menu-btn fa fa-wrench'></i></button></a>
+					<form method='POST' action='index.php' class='disconnect'>
+						<button type='submit' name='disconnect'>déconnexion&nbsp;&nbsp;<i class='menu-btn fa fa-power-off'></i></button>
+					</form>
+				</div>
+			</div>";
+		}
+	}
 		else { 
 			echo "<form method='POST' action='index.php' class='loginForm'>
 					<input type='email' name='logmail' placeholder='Email'>
