@@ -1,15 +1,19 @@
 <div class="billet">
 	<div class="topProjet">
 		<p class="nomProjet"><?= $listeProjetSearch[$i]->getProjetnom()?></p>
-		<p class="auteur">Auteur: <span class="nomPP"><?= $listeProjetSearch[$i]->getProjetusername()?></span></p>
-		<img src="sources/images/photo_project/<?= $listeProjetSearch[$i]->getPhoto()?>" alt="">
+		<p class="auteur">Auteur: <span class="nomPP"><?= $listeProjetSearch[$i]->getProjetusername()?></p>
+		<p class="auteur"><?= $listeProjetSearch[$i]->getProjetdate()?></p>
 	</div>
 	<div class="descProjet">
-		<p>Description: <?= $listeProjetSearch[$i]->getProjetdescription()?></p>
-		<p>Profils recherchés: <?= $listeProjetSearch[$i]->getProfilrecherche()?></p>
-		<p>Durée du projet: <?= $listeProjetSearch[$i]->getTempstravail()?></p>
-		<p>Date de publication: <?= $listeProjetSearch[$i]->getProjetdate()?></p>
-		<p>Statut: <?= $listeProjetSearch[$i]->getStatut()?></p>
+		<p class="">Profils recherchés : <?= $listeProjetSearch[$i]->getProfilrecherche()?></p>
+		<p class="">Durée du projet : <?= $listeProjetSearch[$i]->getTempstravail()?></p>
+		<p>Description : <br> <?= $listeProjetSearch[$i]->getProjetdescription()?></p>
 	</div>
-	<p>Pour voir l'intégralité du projet merci de vous inscrire.</p><a href="index.php?page=dev-inscription">S'incrire</a>
+	<div class="col-3">
+		<div class="content-img">
+		<img src="sources/images/photo_project/<?= $listeProjetSearch[$i]->getPhoto()?>" alt="">
+		</div>
+	<p>Pour voir l'intégralité du projet merci de vous inscrire.</p>
+	<a class="back right" href="index.php?page=dev-inscription">S'incrire</a>
+	</div>
 </div>
