@@ -378,6 +378,10 @@ footer .footer-wrap .col:last-child{
 	padding: 5px;
 }
 
+.descProjet img {
+	width: 100px;
+}
+
 .nomProjet{
 	font-size: 20px;
 }
@@ -397,6 +401,33 @@ a.back {
 	padding: 0.8%;
 	text-decoration: none;
 	color:#fff;
+}
+
+.search {
+	width: 18%;
+	margin: 0 auto;
+	position: relative;
+	height: 20px;
+	margin-bottom: 2%;
+}
+
+.search input[type="search"] {
+	position: absolute;	
+	width: 100%;
+	top: 0;
+	padding: 3%;
+	border-radius: 2px;
+	border: 1px solid #cccccc;
+}
+
+.search button[type="submit"] {
+	position: absolute;	
+	right: 1px;
+	top: 6px;
+	background-color: none;
+	border:none;
+	cursor: pointer;
+	border-left: 1px solid #cccccc;
 }
 
 img.logo {

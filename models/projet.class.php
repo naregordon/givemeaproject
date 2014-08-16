@@ -10,6 +10,7 @@ class Projet {
 	private $tempstravail;
 	private $projetdate;
 	private $statut;
+	private $photo;
 
 	public function getProjetid() {
 		return $this->id;
@@ -45,5 +46,9 @@ class Projet {
 
 	public function getStatut() {
 		return $this->statut;
+	}
+
+	public function getPhoto() {
+		return $this->photo;
 	}
 }

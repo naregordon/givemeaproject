@@ -1,0 +1,15 @@
+<div class="billet">
+	<div class="topProjet">
+		<p class="nomProjet"><?= $listeProjetSelection[$i]->getProjetnom()?></p>
+		<p class="auteur">Auteur: <span class="nomPP"><?= $listeProjetSelection[$i]->getProjetusername()?></span></p>
+	</div>
+	<div class="descProjet">
+		<p>Description: <?= $listeProjetSelection[$i]->getProjetdescription()?></p>
+		<p>Profils recherchés: <?= $listeProjetSelection[$i]->getProfilrecherche()?></p>
+		<p>Durée du projet: <?= $listeProjetSelection[$i]->getTempstravail()?></p>
+		<p>Date de publication: <?= $listeProjetSelection[$i]->getProjetdate()?></p>
+		<p>Statut: <?= $listeProjetSelection[$i]->getStatut()?></p>
+		<img src="sources/images/photo_project/<?= $listeProjetSelection[$i]->getPhoto()?>" alt="img">
+	</div>
+	<p>Pour voir l'intégralité du projet merci de vous inscrire.</p><a href="index.php?page=dev-inscription">S'incrire</a>
+</div>
