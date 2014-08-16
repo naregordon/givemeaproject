@@ -197,12 +197,14 @@ header a{
 
 .content{
 	padding-top: 3%;
+	padding-bottom: 3%;
 	width: 1200px;
-	margin: 3% auto;
+	margin: 5% auto;
 }
 
 .insc-box{
 	overflow: hidden;
+	margin-top: 2%;
 }
 
 .insc{
