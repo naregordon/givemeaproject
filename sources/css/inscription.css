@@ -1,0 +1,44 @@
+.inscription {
+	overflow: hidden;
+	margin: 4% auto;
+}
+
+.inscription .left{
+	width: 50%;
+	float: left;
+}
+
+.inscription .left img {
+	margin: 15% 0 15% 5%;
+}
+
+.inscription .left p {
+	float: left;
+}
+
+.inscription .right{
+	width: 44%;
+	float: left;
+	border-left: 1px solid #CCCCCC;
+	padding-left: 5%;	
+}
+
+.inscription .right input {
+	padding: 2%;
+	margin: 3%;
+	width: 50%;
+	border-radius: 2px;
+	border:1px solid #CCCCCC;
+}
+
+.inscription .right input[type="submit"] {
+	background-color: #117B66;
+	transition-duration: 0.3s;
+	color: #fff;
+	font-weight: bolder;
+}
+
+.inscription .right input[type="submit"]:hover {
+	background-color: #16A085;
+	cursor: pointer;
+}

@@ -381,6 +381,33 @@ footer .footer-wrap .col:last-child{
 	color: #FFF;
 }
 
+/* class supp */
+a.back {
+	background-color: #16A085;
+	padding: 0.8%;
+	text-decoration: none;
+	color:#fff;
+}
+
+.green-black {
+	color: #117B66;
+}
+
+.bold {
+	font-weight: bolder;
+}
+
+.font-s {
+	font-size: 12px;
+} 
+
+.font-m {
+	font-size: 16px;	
+} 
+
+.font-l {
+	font-size: 20px;
+} 
 /* -----------------QUERIES----------------- */
 
 @media screen and (max-width: 1200px) {
