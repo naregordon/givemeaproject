@@ -65,6 +65,11 @@ header a{
 	padding: 0.8%;
 }
 
+.nav ul {
+	float: left;
+	width: 100%;
+}
+
 .nav a {
 	text-decoration: none;
 	color: #0B5043;
@@ -363,6 +368,36 @@ footer .footer-wrap .col:last-child{
 	background-position: 100% -64px;
 	cursor:pointer;
 } */
+
+/* pp post */
+.pp-post {
+	width: 50%;
+	margin: 0 auto;	
+}
+
+.pp-post input, .pp-post textarea, .pp-post select {
+	width: 100%;
+	padding: 2%;
+	margin: 3%;
+	border-radius: 2px;
+	border:1px solid #CCCCCC;
+}
+
+.pp-post input[type="submit"] {
+	background-color: #117B66;
+	transition-duration: 0.3s;
+	color: #fff;
+	font-weight: bolder;
+}
+
+.pp-post input[type="submit"]:hover {
+	background-color: #16A085;
+	cursor: pointer;
+}
+
+.pp-post input[type="file"] {
+	overflow: hidden;
+}
 
 /* liste projet  */
 .liste-projet {
