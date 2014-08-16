@@ -110,8 +110,8 @@ header a{
 	display: none;
 	position:absolute;
 	background-color: #16A085;
-	width:115px;
-	right: 5%;
+	width:150px;
+	right: 10%;
 	z-index: 10;
 }
 
@@ -124,6 +124,7 @@ header a{
 }
 
 .menu button{
+	margin: 4px;
 	display: block;
 	background-color: #21C4A3;
 	border-radius: 2px;
@@ -132,6 +133,11 @@ header a{
 	width: 100%;
 	text-align: right!important;
 	padding: 2px;
+}
+
+.menu button[name="disconnect"] {
+	background-color: #16A085;
+	border:1px solid #21C4A3;
 }
 
 .menu button:hover{
