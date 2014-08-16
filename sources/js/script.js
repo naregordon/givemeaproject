@@ -13,7 +13,7 @@ function displayUrl(url)
 
 function init()
 {
-	var list = new Array("sources/images/slider/slider01.jpg", "sources/images/slider/slider02.jpg", "sources/images/slider/slider03.jpg");
+	var list = new Array("sources/images/slider/slider02.png", "sources/images/slider/slider01.png");
 	var current = 0;
 	var interval;
 	$('#next').on('click', function()
@@ -44,7 +44,7 @@ function init()
 			if (current >= list.length)
 				current = 0;
 			displayUrl(list[current]);
-		}, 3000);
+		}, 4000);
 	})
 
 	$('body').on('keyup', function(info)
