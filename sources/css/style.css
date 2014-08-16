@@ -207,7 +207,7 @@ header a{
 .temoignage{
 	overflow: hidden;
 	padding:10px;
-	background-color: #DDD;
+	background-color: #eee;
 	margin:35px 0;
 }
 
@@ -257,6 +257,7 @@ footer .footer-wrap .col ul{
 }
 
 footer .footer-wrap .col ul li{
+	display: inline-block;
 }
 
 footer .footer-wrap .col ul li a{
@@ -285,6 +286,10 @@ footer .footer-wrap .col:last-child{
 	width:340px;
 	padding:0;
 	margin:20px auto 10px;
+}
+
+.icone {
+	margin: 0;
 }
 
 .icone li{
