@@ -77,7 +77,7 @@ header a{
 }
 
 .menu{
-	display: block;
+	display: none;
 	position:absolute;
 	background-color: #16A085;
 	width:115px;

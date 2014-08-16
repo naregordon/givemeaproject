@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.0.10deb1
+-- version 4.1.12
 -- http://www.phpmyadmin.net
 --
--- Client: localhost
--- Généré le: Mer 13 Août 2014 à 15:17
--- Version du serveur: 5.5.37-0ubuntu0.14.04.1
--- Version de PHP: 5.5.9-1ubuntu4
+-- Client :  localhost:8889
+-- Généré le :  Jeu 14 Août 2014 à 16:49
+-- Version du serveur :  5.5.34
+-- Version de PHP :  5.5.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,20 +17,29 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Base de données: `givemeaproject`
+-- Base de données :  `givemeaproject`
 --
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `canditats`
+-- Structure de la table `candidats`
 --
 
-CREATE TABLE IF NOT EXISTS `canditats` (
-  `id` int(11) NOT NULL,
+CREATE TABLE `candidats` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username_candidat` varchar(32) COLLATE utf8_bin NOT NULL,
   `id_projet` int(11) NOT NULL,
-  `id_candidat` int(11) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=3 ;
+
+--
+-- Contenu de la table `candidats`
+--
+
+INSERT INTO `candidats` (`id`, `username_candidat`, `id_projet`) VALUES
+(1, 'lucash', 4),
+(2, 'lucash', 4);
 
 -- --------------------------------------------------------
 
@@ -38,8 +47,9 @@ CREATE TABLE IF NOT EXISTS `canditats` (
 -- Structure de la table `project`
 --
 
-CREATE TABLE IF NOT EXISTS `project` (
+CREATE TABLE `project` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
+  `selection` varchar(32) COLLATE utf8_bin NOT NULL,
   `projetnom` varchar(255) COLLATE utf8_bin NOT NULL,
   `projetdescription` varchar(1000) COLLATE utf8_bin NOT NULL,
   `projetwords` varchar(255) COLLATE utf8_bin NOT NULL,
@@ -51,16 +61,17 @@ CREATE TABLE IF NOT EXISTS `project` (
   `photo` varchar(255) COLLATE utf8_bin NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=5 ;
 
 --
 -- Contenu de la table `project`
 --
 
-INSERT INTO `project` (`id`, `projetnom`, `projetdescription`, `projetwords`, `profilrecherche`, `projetdate`, `tempstravail`, `username`, `statut`, `photo`) VALUES
-(1, 'Site vitrine abdul', 'elsjjdomjsfmjfjo fjldfjldfj', 'php, design, boucherie, hallal', 'php, javascript, design', '2014-08-11 00:00:00', '3', 'abdul', 'en cours', ''),
-(2, 'sdfsd', 'sdfds', 'fsfssf', 'fsfssf', '2014-08-11 19:34:32', 'sfsfs', 'fsfssf', 'en cours', ''),
-(3, 'Nouvea', 'referzf', 'zergfzergr', 'zergrtrtg', '2014-08-12 00:00:00', 'zgbrtg', 'rtgrt', 'termine', '');
+INSERT INTO `project` (`id`, `selection`, `projetnom`, `projetdescription`, `projetwords`, `profilrecherche`, `projetdate`, `tempstravail`, `username`, `statut`, `photo`) VALUES
+(1, '', '''�''', 'elsjjdomjsfmjfjo fjldfjldfj', 'php, design, boucherie, hallal', 'php, javascript, design', '2014-08-11 00:00:00', '3', 'abdul', 'en cours', ''),
+(2, '', 'sdfsd', 'sdfds', 'fsfssf', 'fsfssf', '2014-08-11 19:34:32', 'sfsfs', 'fsfssf', 'en cours', ''),
+(3, '', 'Nouvea', 'referzf', 'zergfzergr', 'zergrtrtg', '2014-08-12 00:00:00', 'zgbrtg', 'rtgrt', 'termine', ''),
+(4, '', 'Site de dingue', 'ejmjmzfmqdkfms', 'PHP, Flat design, Integration', 'Je cherche un Ã©tudiant qui a des notions de PHP', '2014-08-14 13:26:31', '3', 'janno', 'selection', 'Infographie-comportements-travail-dans-monde-F.jpg');
 
 -- --------------------------------------------------------
 
@@ -68,7 +79,7 @@ INSERT INTO `project` (`id`, `projetnom`, `projetdescription`, `projetwords`, `p
 -- Structure de la table `user`
 --
 
-CREATE TABLE IF NOT EXISTS `user` (
+CREATE TABLE `user` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `username` varchar(32) COLLATE utf8_bin NOT NULL,
   `password` varchar(255) COLLATE utf8_bin NOT NULL,
