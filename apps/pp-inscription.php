@@ -43,8 +43,7 @@ if(isset($_POST['username'],$_POST['email'], $_POST['password'], $_POST['confpas
 			$name = 'user.png';	
 		/*}*/
 		mysqli_query($db, "INSERT INTO user (username, password, email, type, photo) VALUES ('".$username."','".$password."','".$email."', 'pp','".$name."')");
-		echo "Votre compte a bien été crée";
-		require("apps/home.php");
+		require("apps/connexion.php");
 	}
 }
 else
