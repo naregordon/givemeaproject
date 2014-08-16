@@ -42,5 +42,8 @@ if(isset($_POST['submitModifPassword'], $_POST['modifXPassword'], $_POST['modifP
 
 if(isset($_POST['supprimerCompte'])) {
 	mysqli_query($db, "DELETE FROM user WHERE username = '".$_SESSION['username']."'");
+	$_SESSION=array();
+	session_destroy();
+	require("apps/home.php");
 }
 require("views/dev-modifprofil.phtml");
