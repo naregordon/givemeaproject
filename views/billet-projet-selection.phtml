@@ -13,19 +13,23 @@
 		<div class="content-img">
 		<img src="sources/images/photo_project/<?= $listeProjetSelection[$i]->getPhoto()?>" alt="">
 		</div>
+
 	<?php
-	if($_SESSION['type'] === 'dev') {
+	$res=mysqli_query($db,"SELECT type FROM user WHERE username = '".$_SESSION['username']."'");
+	$type=mysqli_fetch_assoc($res);
+	if($type['type'] == 'dev') {
 		echo '<form action="index.php?page=dev-projets" method="POST">
 			<input type="hidden" name="idp" value="'.$listeProjetSelection[$i]->getProjetid().'">
 			<input type="submit" name="voirFicheProjet" value="Voir plus de détails">
 			<input type="submit" class="back" name="postulerProjet" value="Postuler">
 			</form>';
 		}
-		else {
+		else if ($type['type'] == 'pp') {
 			echo '<form action="index.php?page=pp-projets" method="POST">
 			<input type="hidden" name="idp" value="'.$listeProjetSelection[$i]->getProjetid().'">
 			<input type="submit" class="back" name="voirFicheProjet" value="Voir plus de détails">
 			</form>';
 		}
 	?>
+	</div>
 </div>
