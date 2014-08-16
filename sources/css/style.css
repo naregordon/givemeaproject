@@ -30,6 +30,9 @@ header {
 	line-height: 30px;
 	background-color: #16A085;
 	position: relative;
+	position: fixed;
+	top: 0;
+	z-index: 1;
 }
 
 header h1 {
@@ -185,6 +188,7 @@ header a{
 }
 
 .content{
+	padding-top: 3%;
 	width: 1200px;
 	margin: 3% auto;
 }
