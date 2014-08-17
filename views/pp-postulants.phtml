@@ -1,1 +1,19 @@
-pp-postulants
+<table>
+	<thead>
+		<th>Postulants</th>
+		<th>Selection</th>
+	</thead>
+	<tbody>
+	<?php
+		$i = 0;
+		while (isset($listePostulants[$i])) {
+			require("views/postulant.phtml");
+			$i++;
+		}
+	?>
+	</tbody>
+</table>
+
+<form action="index.php?page=pp-postulants" method="POST">
+	<input type="submit" name="selectSubmit" value="Attribuer le projet">
+</form>

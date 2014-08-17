@@ -9,7 +9,17 @@ if (isset($_POST['idp'], $_POST['voirFicheProjet'])){
 	require("views/pp-fiche-projet.phtml");
 }
 
+function affichagePostulants($db,$id) {
+	$res = mysqli_query($db, "SELECT * FROM user LEFT JOIN candidats ON user.username = candidats.username_candidat WHERE candidats.id_projet='".$id."'");
+	$tab = array();
+	while($data = mysqli_fetch_assoc($res)) {
+		$tab[] = $data;
+	}
+	return $tab;
+}
+
 if(isset($_POST['idp'], $_POST['postulants'])) {
-	$idp=$_POST['idp'];
-	require("views/pp-fiche-projet.phtml");
+	$id=$_POST['idp'];
+	$listePostulants = affichagePostulants($db,$id);
+	require("views/pp-postulants.phtml");
 }
