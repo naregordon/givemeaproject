@@ -25,9 +25,12 @@
 			</form>';
 		}
 		else if ($type['type'] == 'pp') {
+			$res = mysqli_query($db, "SELECT COUNT(*) AS count FROM candidats WHERE id_projet='".$listeProjetSelection[$i]->getProjetid()."'");
+			$data = mysqli_fetch_assoc($res);
 			echo '<form action="index.php?page=pp-projets" method="POST">
 			<input type="hidden" name="idp" value="'.$listeProjetSelection[$i]->getProjetid().'">
 			<input type="submit" class="back" name="voirFicheProjet" value="Voir plus de détails">
+			<input type="submit" class="postulants" name="postulants" value="'.$data['count'].' postulants">
 			</form>';
 		}
 	?>

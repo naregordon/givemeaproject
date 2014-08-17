@@ -8,3 +8,8 @@ if (isset($_POST['idp'], $_POST['voirFicheProjet'])){
 	$data = mysqli_fetch_object($res, 'Projet');
 	require("views/pp-fiche-projet.phtml");
 }
+
+if(isset($_POST['idp'], $_POST['postulants'])) {
+	$idp=$_POST['idp'];
+	require("views/pp-fiche-projet.phtml");
+}
