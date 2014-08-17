@@ -369,6 +369,98 @@ footer .footer-wrap .col:last-child{
 	cursor:pointer;
 } */
 
+/* modif profil dev */
+.modifprofil-dev {
+	width: 50%;
+	margin: 0 auto;	
+}
+
+.modifprofil-dev img {
+	width: 20%;
+	border-radius: 50%;
+	background-color: #fff;
+	float: left;
+	margin-left: 10%;
+}
+
+.modifprofil-dev input, .modifprofil-dev textarea, .modifprofil-dev select {
+	width: 100%;
+	padding: 2%;
+	margin: 3%;
+	border-radius: 2px;
+	border:1px solid #CCCCCC;
+}
+
+.modifprofil-dev textarea {
+	height: 200px;
+}
+
+.modifprofil-dev input[type="submit"] {
+	background-color: #117B66;
+	transition-duration: 0.3s;
+	color: #fff;
+	font-weight: bolder;
+}
+
+.modifprofil-dev input[type="submit"]:hover {
+	background-color: #16A085;
+	cursor: pointer;
+}
+
+.modifprofil-dev input[type="file"] {
+	overflow: hidden;
+	float: left;
+	width: 50%!important;
+	margin-top: 5%;
+}
+
+/* modif profil pp */
+
+.modifprofil-pp {
+	width: 50%;
+	margin: 0 auto;	
+	overflow: hidden;
+}
+
+.modifprofil-pp img {
+	width: 20%;
+	border-radius: 50%;
+	background-color: #fff;
+	float: left;
+	margin-left: 10%;
+}
+
+.modifprofil-pp input, .modifprofil-pp textarea, .modifprofil-pp select {
+	width: 100%;
+	padding: 2%;
+	margin: 3%;
+	border-radius: 2px;
+	border:1px solid #CCCCCC;
+}
+
+.modifprofil-pp textarea {
+	height: 200px;
+}
+
+.modifprofil-pp input[type="submit"] {
+	background-color: #117B66;
+	transition-duration: 0.3s;
+	color: #fff;
+	font-weight: bolder;
+}
+
+.modifprofil-pp input[type="submit"]:hover {
+	background-color: #16A085;
+	cursor: pointer;
+}
+
+.modifprofil-pp input[type="file"] {
+	overflow: hidden;
+	float: left;
+	width: 50%!important;
+	margin-top: 5%;
+}
+
 /* pp post */
 .pp-post {
 	width: 50%;
@@ -381,6 +473,10 @@ footer .footer-wrap .col:last-child{
 	margin: 3%;
 	border-radius: 2px;
 	border:1px solid #CCCCCC;
+}
+
+.pp-post textarea {
+	height: 200px;
 }
 
 .pp-post input[type="submit"] {

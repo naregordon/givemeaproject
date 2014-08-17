@@ -1,26 +1,13 @@
 <div class="modifprofil-dev">
 	<form action="index.php?page=dev-modifprofil" method="POST" enctype="multipart/form-data">
-
-		<label for="modifUsername">Nom d'utilisateur : </label>
-		<input type="text" name="modifUsername" value="<?= $content['username']?>"><br>
-
-		<label for="modifEmail">Adresse email : </label>
-		<input type="text" name="modifEmail" value="<?= $content['email']?>"><br>
-
-		<label for="modifNom">Nom : </label>
-		<input type="text" name="modifNom" value="<?= $content['nom']?>"><br>
-
-		<label for="modifPrenom">Prénom : </label>
-		<input type="text" name="modifPrenom" value="<?= $content['prenom']?>"><br>
-
-		<label for="modifPrésentation">Présentation : </label>
-		<textarea name="modifPresentation"><?= $content['presentation']?></textarea><br>
-
-		<label for="modifPaypal">Mon compte Paypal : </label>
-		<input type="email" name="modifPaypal" value="<?= $content['paypal']?>"><br>
-
-		<label for="modifCompetences">Mes compétences : </label>
-		<textarea name="modifCompetences"><?= $content['competences']?></textarea><br>
+		<input placeholder="Nom d'utilisateur" type="text" name="modifUsername" value="<?= $content['username']?>"><br>
+		<input placeholder="Adresse email" type="text" name="modifEmail" value="<?= $content['email']?>"><br>
+		<input placeholder="Nom" type="text" name="modifNom" value="<?= $content['nom']?>"><br>
+		<input placeholder="Prénom" type="text" name="modifPrenom" value="<?= $content['prenom']?>"><br>
+		<textarea placeholder="Présentation" name="modifPresentation"><?= $content['presentation']?></textarea><br>
+		<input placeholder="Mon compte Paypal" type="email" name="modifPaypal" value="<?= $content['paypal']?>"><br>
+		<textarea placeholder="Mes compétences" name="modifCompetences"><?= $content['competences']?></textarea><br>
+		<img src="sources/images/photo_pp_dev/<?= $content['photo']?>" alt="">
 		<input type="file" name="photo_pp_dev" accept="image/bmp,image/gif,image/png,image/jpeg,image/x-ms-bmp"> 
 		<input type="submit" name="submitModifProfil" value="Modifier">
 	</form>
