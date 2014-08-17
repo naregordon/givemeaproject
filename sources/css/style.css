@@ -368,6 +368,99 @@ footer .footer-wrap .col:last-child{
 	background-position: 100% -64px;
 	cursor:pointer;
 } */
+
+/* fiche projet pp */
+
+.fiche-projet-pp {
+	overflow: hidden;
+	background-color: #F2F2F2;
+	padding: 3%;
+}
+
+.fiche-projet-pp .pr-col1 {
+	width: 15%;
+	float: left;
+}
+
+.fiche-projet-pp .pr-col2 {
+	width: 60%;
+	float: left;
+	border-left: 1px solid #ccc;
+	padding-left: 2%;
+	padding-right: 2%;
+}
+
+.fiche-projet-pp .pr-col3 {
+	width: 25%;
+	float: left;
+}
+
+.fiche-projet-pp img {
+	width: 80%;
+	background-color: #fff;
+}
+
+.fiche-projet-pp button {
+	cursor: pointer;
+	float: right;
+}
+
+.fiche-projet-pp h3 {
+	margin: 1%;
+}
+
+/* fiche projet dev */
+
+.fiche-projet-dev {
+	overflow: hidden;
+	background-color: #F2F2F2;
+	padding: 3%;
+}
+
+.fiche-projet-dev .pr-col1 {
+	width: 15%;
+	float: left;
+}
+
+.fiche-projet-dev .pr-col2 {
+	width: 60%;
+	float: left;
+	border-left: 1px solid #ccc;
+	padding-left: 2%;
+	padding-right: 2%;
+}
+
+.fiche-projet-dev .pr-col3 {
+	width: 25%;
+	float: left;
+}
+
+.fiche-projet-dev img {
+	width: 80%;
+	background-color: #fff;
+}
+
+.fiche-projet-dev button {
+	cursor: pointer;
+	float: right;
+}
+
+.fiche-projet-dev input {
+	cursor: pointer;
+	float: right;
+	margin-bottom: 10%;
+	background-color: #3498DB;
+	border:none;
+	color: #fff;
+	padding: 1%;
+	font-weight: bold;
+}
+
+.fiche-projet-dev h3 {
+	margin: 1%;
+	clear: both;
+}
+
 /* profil dev */
 .ficheprofil-dev {
 	overflow: hidden;

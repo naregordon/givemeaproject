@@ -1,13 +1,19 @@
 <?php require('apps/pp-nav.php'); ?>
 
-FICHE PROJET PP
-
-Nom du projet: <?=$data->getProjetnom()?><br>
-Statut du projet: <?=$data->getStatut()?><br>
-Date de post du projet: <?=$data->getProjetdate()?><br>
-Auteur: <?=$data->getProjetusername()?><br>
-Description du projet: <?=$data->getProjetdescription()?><br>
-Profil recherché: <?=$data->getProfilrecherche()?><br>
-Temps de travail estimé: <?=$data->getTempstravail()?><br>
-
-<a href="index.php?page=pp-profil">Back</a>
+<a href="index.php?page=pp-profil" class="back">Back</a>
+<div class="fiche-projet-pp">
+	<div class="pr-col1">
+		<img src="sources/images/photo_project/<?=$data->getPhoto()?>" alt="">
+<h3><?=$data->getProjetusername()?></h3>
+<h3><?=$data->getProjetdate()?></h3>
+	</div>
+	<div class="pr-col2">
+<h3>Nom du projet: <?=$data->getProjetnom()?></h3>
+<h3>Statut du projet: <?=$data->getStatut()?></h3>
+<h3>Description du projet: <?=$data->getProjetdescription()?></h3>	
+	</div>
+	<div class="pr-col3">
+<h3>Profil recherché: <?=$data->getProfilrecherche()?></h3>
+<h3>Temps de travail estimé: <?=$data->getTempstravail()?></h3>
+	</div>
+</div>

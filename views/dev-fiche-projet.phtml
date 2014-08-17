@@ -1,15 +1,18 @@
 <?php require('apps/dev-nav.php'); ?>
+<a href="index.php?page=dev-recherche"  class="back">Back</a>
 
-FICHE PROJET DEV
-
-Nom du projet: <?=$data->getProjetnom()?><br>
-Statut du projet: <?=$data->getStatut()?><br>
-Date de post du projet: <?=$data->getProjetdate()?><br>
-Auteur: <?=$data->getProjetusername()?><br>
-Description du projet: <?=$data->getProjetdescription()?><br>
-Profil recherché: <?=$data->getProfilrecherche()?><br>
-Temps de travail estimé: <?=$data->getTempstravail()?><br>
-
+<div class="fiche-projet-dev">
+	<div class="pr-col1">
+		<img src="sources/images/photo_project/<?=$data->getPhoto()?>" alt="">
+<h3><?=$data->getProjetusername()?></h3>
+<h3><?=$data->getProjetdate()?></h3>
+	</div>
+	<div class="pr-col2">
+<h3>Nom du projet: <?=$data->getProjetnom()?></h3>
+<h3>Statut du projet: <?=$data->getStatut()?></h3>
+<h3>Description du projet: <?=$data->getProjetdescription()?></h3>	
+	</div>
+	<div class="pr-col3">
 <?php
 	if($data->getStatut() === 'selection') {
 		echo '<form action="index.php?page=dev-projets" method="POST">
@@ -18,5 +21,7 @@ Temps de travail estimé: <?=$data->getTempstravail()?><br>
 			</form>';
 	}
 ?>
-
-<a href="index.php?page=dev-profil">Back</a>
+<h3>Profil recherché: <?=$data->getProfilrecherche()?></h3>
+<h3>Temps de travail estimé: <?=$data->getTempstravail()?></h3>
+	</div>
+</div>
