@@ -368,6 +368,84 @@ footer .footer-wrap .col:last-child{
 	background-position: 100% -64px;
 	cursor:pointer;
 } */
+/* profil dev */
+.ficheprofil-dev {
+	overflow: hidden;
+	background-color: #F2F2F2;
+	padding: 3%;
+}
+
+.ficheprofil-dev .p-col1 {
+	width: 15%;
+	float: left;
+}
+
+.ficheprofil-dev .p-col2 {
+	width: 60%;
+	float: left;
+	border-left: 1px solid #ccc;
+	padding-left: 2%;
+}
+
+.ficheprofil-dev .p-col3 {
+	width: 25%;
+	float: left;
+}
+
+.ficheprofil-dev img {
+	width: 80%;
+	border-radius: 50%;
+	background-color: #fff;
+}
+
+.ficheprofil-dev button {
+	cursor: pointer;
+	float: right;
+}
+
+.ficheprofil-dev h3 {
+	margin: 1%;
+}
+
+/* profil pp */
+.ficheprofil-pp {
+	overflow: hidden;
+	background-color: #F2F2F2;
+	padding: 3%;
+}
+
+.ficheprofil-pp .p-col1 {
+	width: 15%;
+	float: left;
+}
+
+.ficheprofil-pp .p-col2 {
+	width: 60%;
+	float: left;
+	border-left: 1px solid #ccc;
+	padding-left: 2%;
+}
+
+.ficheprofil-pp .p-col3 {
+	width: 25%;
+	float: left;
+}
+
+.ficheprofil-pp img {
+	width: 80%;
+	border-radius: 50%;
+	background-color: #fff;
+}
+
+.ficheprofil-pp button {
+	cursor: pointer;
+	float: right;
+}
+
+.ficheprofil-pp h3 {
+	margin: 1%;
+}
+
 
 /* modif profil dev */
 .modifprofil-dev {

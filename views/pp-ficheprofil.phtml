@@ -1,9 +1,18 @@
 <?php require("apps/pp-nav.php"); ?>
 <div class="ficheprofil-pp">
-	<h3><?= $currentProfile->getPrenom()?></h3>
-	<h3><?= $currentProfile->getNom()?></h3>
-	<h3><?= $currentProfile->getPresentation()?></h3>
-	<h3><?= $currentProfile->getEmail()?></h3>
-	<h3><?= $currentProfile->getType()?></h3>
+	<div class="p-col1">
+		<img src="sources/images/photo_pp_dev/<?= $currentProfile->getPhoto()?>" alt="">
+	</div>
+	<div class="p-col2">
+		<h3>User name : <?= $currentProfile->getUsername()?></h3>
+		<h3>Prenom : <?= $currentProfile->getPrenom()?></h3>
+		<h3>Nom : <?= $currentProfile->getNom()?></h3>
+		<h3>Presentation : <?= $currentProfile->getPresentation()?></h3>
+		<h3>Comptétences : <?= $currentProfile->getCompetences()?></h3>
+		<h3>E-mail : <?= $currentProfile->getEmail()?></h3>
+		<h3>PayPal : <?= $currentProfile->getPaypal()?></h3>
+	</div>
+	<div class="p-col3">
+		<a href="index.php?page=pp-modifprofil"><button><i class="fa fa-wrench"></i></button></a>
+	</div>
 </div>
-<a href="index.php?page=pp-modifprofil">Modifier mon profil</a>
