@@ -15,12 +15,12 @@
 		echo '<form action="index.php?page=dev-projets" method="POST">
 			<input type="hidden" name="idp" value="<?= $listeProjetSelection[$i]->getProjetid()?>">
 			<input type="submit" name="voirFicheProjet" value="Voir plus de détails">
-		</form>'
+		</form>';
 	}
 	else {
 		echo '<form action="index.php?page=pp-projets" method="POST">
 			<input type="hidden" name="idp" value="<?= $listeProjetSelection[$i]->getProjetid()?>">
 			<input type="submit" name="voirFicheProjet" value="Voir plus de détails">
-		</form>'
+		</form>';
 	} ?>
 </div>

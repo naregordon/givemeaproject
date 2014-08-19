@@ -24,6 +24,7 @@ if(isset($_POST['logmail'], $_POST['logpass'], $_POST['logsubmit'])) {
 		$photo_user = mysqli_fetch_assoc($res);
 		$_SESSION['type'] = $photo_user['type'];
 		$page="dev-profil";
+		
 	}
 	elseif($data['email'] === $email && $data['password'] === $password && $data['type'] === 'pp') {
 		$_SESSION['username'] = $data['username'];
