@@ -12,14 +12,14 @@
 	</div>
 	<?php
 	if($_SESSION['type'] === 'pp') {
-		echo '<form action="index.php?page=dev-projets" method="POST">
-			<input type="hidden" name="idp" value="<?= $listeProjetSelection[$i]->getProjetid()?>">
+		echo '<form action="index.php?page=pp-projets" method="POST">
+			<input type="hidden" name="idp" value="'.$listeProjetEncours[$i]->getProjetid().'">
 			<input type="submit" name="voirFicheProjet" value="Voir plus de détails">
 		</form>';
 	}
 	else {
-		echo '<form action="index.php?page=pp-projets" method="POST">
-			<input type="hidden" name="idp" value="<?= $listeProjetSelection[$i]->getProjetid()?>">
+		echo '<form action="index.php?page=dev-projets" method="POST">
+			<input type="hidden" name="idp" value="'.$listeProjetEncours[$i]->getProjetid().'">
 			<input type="submit" name="voirFicheProjet" value="Voir plus de détails">
 		</form>';
 	} ?>
