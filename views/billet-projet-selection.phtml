@@ -24,7 +24,7 @@
 			<input type="submit" class="back" name="postulerProjet" value="Postuler">
 			</form>';
 		}
-		else if ($type['type'] == 'pp') {
+		elseif ($type['type'] == 'pp') {
 			$res = mysqli_query($db, "SELECT COUNT(*) AS count FROM candidats WHERE id_projet='".$listeProjetSelection[$i]->getProjetid()."'");
 			$data = mysqli_fetch_assoc($res);
 			echo '<form action="index.php?page=pp-projets" method="POST">
