@@ -13,9 +13,17 @@
 			$i=0;
 			while (isset($listeProjetSelection[$i]))
 		    {
-			    require ('views/billet-projet-encours.phtml');
+			    require ('views/billet-projet-selection.phtml');
 			    $i++;
 			}
 		?>
 
 <h1>Projets terminés</h1>
+		<?php 
+			$i=0;
+			while (isset($listeProjetTermine[$i]))
+		    {
+			    require ('views/billet-projet-termine.phtml');
+			    $i++;
+			}
+		?>
