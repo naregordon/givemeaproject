@@ -17,7 +17,15 @@
 	<?php
 	$res=mysqli_query($db,"SELECT type FROM user WHERE username = '".$_SESSION['username']."'");
 	$type=mysqli_fetch_assoc($res);
-		if($type['type'] == 'dev') {
+	$res2 = mysqli_query($db, "SELECT * FROM candidats WHERE id_projet = '".$listeProjetSelection[$i]->getProjetid()."'");
+	$data2 = mysqli_fetch_assoc($res2);
+		if($type['type'] == 'dev' && $data2['username_candidat'] === $_SESSION['username']) {
+		echo '<form action="index.php?page=dev-projets" method="POST">
+			<input type="hidden" name="idp" value="'.$listeProjetSelection[$i]->getProjetid().'">
+			<input type="submit" name="voirFicheProjet" value="Voir plus de détails">
+			</form>';
+		}
+		elseif($type['type'] == 'dev') {
 		echo '<form action="index.php?page=dev-projets" method="POST">
 			<input type="hidden" name="idp" value="'.$listeProjetSelection[$i]->getProjetid().'">
 			<input type="submit" name="voirFicheProjet" value="Voir plus de détails">

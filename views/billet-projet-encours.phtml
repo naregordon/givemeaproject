@@ -11,16 +11,20 @@
 		<p>Statut: <?= $listeProjetEncours[$i]->getStatut()?></p>
 	</div>
 	<?php
-	if($_SESSION['type'] === 'pp') {
-		echo '<form action="index.php?page=pp-projets" method="POST">
-			<input type="hidden" name="idp" value="'.$listeProjetEncours[$i]->getProjetid().'">
-			<input type="submit" name="voirFicheProjet" value="Voir plus de détails">
-		</form>';
-	}
-	else {
-		echo '<form action="index.php?page=dev-projets" method="POST">
-			<input type="hidden" name="idp" value="'.$listeProjetEncours[$i]->getProjetid().'">
-			<input type="submit" name="voirFicheProjet" value="Voir plus de détails">
-		</form>';
-	} ?>
+		$res=mysqli_query($db,"SELECT type FROM user WHERE username = '".$_SESSION['username']."'");
+		$type=mysqli_fetch_assoc($res);
+
+		if($type['type'] == 'pp') {
+			echo '<form action="index.php?page=pp-projets" method="POST">
+				<input type="hidden" name="idp" value="'.$listeProjetEncours[$i]->getProjetid().'">
+				<input type="submit" name="voirFicheProjet" value="Voir plus de détails">
+			</form>';
+		}
+		elseif($type['type'] == 'dev') {
+			echo '<form action="index.php?page=dev-projets" method="POST">
+				<input type="hidden" name="idp" value="'.$listeProjetEncours[$i]->getProjetid().'">
+				<input type="submit" name="voirFicheProjet" value="Voir plus de détails">
+			</form>';
+		} 
+	?>
 </div>
